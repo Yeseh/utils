@@ -28,7 +28,7 @@ export class LinkedList<T> implements Iterable<T> {
     }
 
     addFirst(val: T): void {
-        const node = new Node(val, this.list!.head);
+        const node = new Node(val, this.list?.head);
         
         if (!this.isEmpty()) {
             this.list!.head.prev = node
@@ -46,7 +46,7 @@ export class LinkedList<T> implements Iterable<T> {
     }
 
     addLast(val: T): void {
-        const node = new Node(val, null, this.list!.tail);
+        const node = new Node(val, null, this.list?.tail);
 
         if (!this.isEmpty()) {
             this.list!.tail.next = node;
@@ -246,6 +246,20 @@ export class LinkedList<T> implements Iterable<T> {
         return this;
     }
 
+    toAscArray(): Array<T> {
+        if (this.isEmpty()) return [];
+
+        const arr = [];
+        let cur = this.list!.tail;
+
+        while (cur.prev !== null) {
+            arr.push(cur.data);
+            cur = cur.prev;
+        }
+
+        return arr;   
+    }
+
     *[Symbol.iterator](): Iterator<T> {
         if (!this.list) return;
 
@@ -255,13 +269,4 @@ export class LinkedList<T> implements Iterable<T> {
             yield cur.data;
         }
     }
-
-
-
-    
-
-
-
-
-
 }

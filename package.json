@@ -1,8 +1,8 @@
 {
-    "name": "@yeseh/axis",
+    "name": "@yeseh/ts-utils",
     "version": "1.0.0",
-    "description": "NodeJS TypeScript project starter toolkit",
-    "main": "\\",
+    "description": "Utility functions, classes and datastructures for typescript development",
+    "main": "src/index.ts",
     "scripts": {
         "start": "nodemon -e ts ./src/index.ts --config ./config/nodemon.json",
         "test": "mocha --require ts-node/register ./test/**/*.spec.ts --timeout 0 --exit",
@@ -28,9 +28,7 @@
         "url": "https://github.com/Yeseh/axis/issues"
     },
     "homepage": "https://github.com/Yeseh/axis#readme",
-    "dependencies": {
-        "dotenv": "^8.2.0"
-    },
+    "dependencies": {},
     "devDependencies": {
         "@types/dotenv": "^8.2.0",
         "@types/node": "^13.13.4",
@@ -41,7 +39,10 @@
         "nodemon": "^2.0.3",
         "prettier-eslint": "^9.0.1",
         "ts-node": "^8.9.1",
-        "typescript": "^3.8.3"
+        "typescript": "^3.8.3",
+        "dotenv": "^8.2.0",
+        "rollup": "^2.10.0",
+        "rollup-plugin-typescript2": "^0.27.1"
     },
     "prettier": "@yeseh/prettier-config"
 }

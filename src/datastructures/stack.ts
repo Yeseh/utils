@@ -36,6 +36,10 @@ class Stack<T> implements Iterable<T> {
         return this.list.contains(element)
     }
 
+    arrayFromTail() {
+        return this.list.toAscArray();
+    }
+
     [Symbol.iterator](): Iterator<T> {
         return this.list[Symbol.iterator]();
     }
