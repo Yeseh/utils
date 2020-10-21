@@ -36,7 +36,9 @@ export class LinkedList<T> implements Iterable<T> {
             this.list!.head = node;
 
             this.list!.size++
-        } else {
+        } 
+        
+        else {
             this.list = {
                 head: node,
                 tail: node,
@@ -69,12 +71,12 @@ export class LinkedList<T> implements Iterable<T> {
             return;
         }
 
-        if (i === this.size()) {
+        else if (i === this.size()) {
             this.addLast(val);
             return;
         }
 
-        if (i < 0 || i >= this.size() || !this.list) {
+        else if (i < 0 || i >= this.size() || !this.list) {
             throw new Error("Index out of bounds")
         }
 

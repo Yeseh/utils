@@ -3,5 +3,6 @@ export const isPrimitive = (obj: any): boolean => {
         || typeof obj === "number"
         || typeof obj === "bigint"
         || typeof obj === "string"
-        || typeof obj === undefined
+        || typeof obj === "bigint"
+        || typeof obj === "symbol"
 }

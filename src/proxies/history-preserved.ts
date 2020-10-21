@@ -98,8 +98,8 @@ export const historyProxy = <T extends object>(obj: T): HistoryPreserved<T> => {
 
         if (!prevOp) throw new Error("Object history is empty, nothing to undo;");
 
-        if (isPrimitive(prevOp?.oldValue)) {
-            this[prevOp.property] = prevOp.oldValue;
+        if (isPrimitive(prevOp?.currentValue)) {
+            this[prevOp.property] = prevOp.currentValue;
         } 
         
         else {
